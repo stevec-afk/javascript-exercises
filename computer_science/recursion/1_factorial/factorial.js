@@ -1,9 +1,7 @@
-function factorial (x) {
+const factorial = function (x) {
+    if (!Number.isInteger(x) || x < 0) return;
     if (x === 0) return 1;
-
-    let total = 0;
-    total+=factorial(total-1);
-    return total;
+    return x * factorial(x-1);
 };
 
 // Do not edit below this line
